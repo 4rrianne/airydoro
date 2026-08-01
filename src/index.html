@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Airydoro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ 
+  <div class="canvas">
+
+    <h1 id="status" class="status">FOCUS TIME</h1>
+
+
+    <img src= "" id="start-button" class="control-button start" onclick="toggleTimer()" alt="Start">
+    <img src = "images/longbreak.png" id="longbreak-button" class="control-button longbreak" onclick="switchToLongBreak()" alt="Longbreak">
+    <img src = "images/motivation.png" id="motivation-button" class="control-button motivation" alt="Motivation">
+    <img src="images/focus.png" id="focus-button" class="control-button focus" onclick="switchToFocus()" alt="Focus">
+    <img src="images/break.png" id="break-button" class="control-button break" onclick="switchToBreak()" alt="Break">
+
+
+    <div class="motivation-container">
+      <img id="motivation-image" class="motivation-image" src="" alt="Motivation">
+      <p id="motivation-text" class="motivation-text"></p>
+    </div>
+
+
+    <div class = "timer-box">
+      <h2 id = "timer" > 25:00 </h2>
+    </div>
+
+    <audio id = "end-sound" src = "end-sound.mp3" preload = "auto"></audio>
+
+    <img src = "images/heart.png" class = "heart-first">
+    <img src = "images/heart.png" class = "heart-second">
+    <img src = "images/heart.png" class = "heart-third">
+    <img src = "images/heart.png" class = "heart-fourth">
+    <img src = "images/heart.png" class = "heart-fifth">
+    <img src = "images/heart.png" class = "heart-sixth">
+
+    <p id = "cycle-info" class="cycle-info"></p>
+
+  </div>
+
+  <script src="main.js"></script>
+
+</body>
+
+</html>
