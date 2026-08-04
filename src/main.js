@@ -58,7 +58,7 @@ function startTimer() {
   const startBtn = document.getElementById("start-button");
   startBtn.src = "images/start.png";
 
-  // ⏭ Auto switch logic
+  
   if (currentMode === "focus") {
     focusCount++;
     if (focusCount < 4) {
@@ -110,51 +110,3 @@ function setMode(mode, minutes, label, autoStart = false) {
 
 setMode("focus", 50, "Focus Time");
 
-
-// ⬇️ Motivation Text & Image Setup
-const motivationMessages = [
-  "I really want a stainless steel fridge",
-  "I love you sooooo much! You're doing so good",
-  "You don't want to live in a trailer with 6 kids, do you?",
-  "You're hot when you work hard lel",
-  "Come on, our combined salaries need to reach at least 400k",
-  "Work hard so we can go anywhere we want in the future!!!",
-  "I luh yew <333333333333 Mwah!!!!"
-];
-
-const motivationImages = [
-  "./images/airy.png",
-  "./images/airy1.png",
-  "./images/airy2.png",
-  "./images/airy3.png",
-  "./images/airy4.png"
-];
-
-const motivationText = document.getElementById('motivation-text');
-const motivationImage = document.getElementById('motivation-image');
-const motivationButton = document.getElementById('motivation-button');
-
-let lastTextIndex = -1;
-let lastImageIndex = -1;
-
-motivationButton.addEventListener('click', () => {
-  // --- Text ---
-  let randomTextIndex;
-  do {
-    randomTextIndex = Math.floor(Math.random() * motivationMessages.length);
-  } while (randomTextIndex === lastTextIndex && motivationMessages.length > 1);
-  lastTextIndex = randomTextIndex;
-  motivationText.textContent = motivationMessages[randomTextIndex];
-  motivationText.classList.remove('bounce');
-  void motivationText.offsetWidth;
-  motivationText.classList.add('bounce');
-
-  // --- Image ---
-  let randomImageIndex;
-  do {
-    randomImageIndex = Math.floor(Math.random() * motivationImages.length);
-  } while (randomImageIndex === lastImageIndex && motivationImages.length > 1);
-  lastImageIndex = randomImageIndex;
-  motivationImage.src = motivationImages[randomImageIndex];
-  motivationImage.style.display = "block";
-});
