@@ -7,6 +7,6 @@ Press "Start" to begin the 50-minute timer. After the time is up, the "break" co
 **How to set up** (requires Node.js and Rust installed)
 1. Download repository and extract, or clone it.
 2. Open a terminal and navigate into the project folder. **Note:** if you downloaded the ZIP, GitHub nests it one folder deeper than expected — you may need to `cd` into a subfolder with the same name before you see `package.json`.
-3. Install dependencies: npm install
-4. Run in development mode: npm run tauri dev
-5. To generate a '.exe' you can run without a terminal: npm run tauri build 
+3. Install dependencies: `npm install`
+4. Run in development mode: `npm run tauri dev`
+5. To generate a '.exe' you can run without a terminal: `npm run tauri build` 
